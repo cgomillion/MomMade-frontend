@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import { BrowserRouter, Route, Link } from "react-router-dom";
 import ProductTable from './components/productTable';
 import NewProductForm from './components/newProductForm';
+import Header from './components/Header';
 
 
 
@@ -14,6 +15,7 @@ class App extends Component {
     super(props)
     this.state = {
       products: [],
+      thsirts: [],
       modalOpen: false,
       productToBeEdited: {},
       type: '',
@@ -43,6 +45,27 @@ class App extends Component {
     }).then(data => {
       this.setState({
         products: data,
+      })
+      
+     })
+     
+  }
+
+  getTshirts = () => {
+    // fetch call to the server (backend)
+    fetch(baseUrl + "/products/tshirts",{
+      credentials: "include"
+    })
+    .then(res => { 
+      if (res.status===200){
+        return res.json()
+      }
+      else {
+        return []
+      }
+    }).then(data => {
+      this.setState({
+        tshirts: data,
       })
       
      })
@@ -126,6 +149,7 @@ class App extends Component {
 
     componentDidMount() {
       this.getProducts()
+      this.getTshirts()
       
     }
     
@@ -168,7 +192,7 @@ class App extends Component {
     // console.log(this.state.products)
   return (
     <div className="App">
-     
+      <Header />
 
       <ProductTable
         products={this.state.products}
