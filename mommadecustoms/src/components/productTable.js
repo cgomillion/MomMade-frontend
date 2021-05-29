@@ -7,7 +7,7 @@ const ProductTable = (props) =>{
         <table>
             <tbody>
                 {props.products.map(products => {
-                    // console.log(products.product.name)
+                    console.log(products.product.name)
                     return (
                         <tr key={products._id} >
                             <td>{products.type}</td>

@@ -5,6 +5,7 @@ import ProductTable from './components/productTable';
 import NewProductForm from './components/newProductForm';
 
 
+
 // Baseurl
 let baseUrl = 'http://localhost:3005'
 
@@ -167,6 +168,8 @@ class App extends Component {
     // console.log(this.state.products)
   return (
     <div className="App">
+     
+
       <ProductTable
         products={this.state.products}
         deleteProduct={this.deleteProduct}
