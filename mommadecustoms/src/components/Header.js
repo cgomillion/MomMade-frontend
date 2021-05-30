@@ -3,11 +3,13 @@ import React, { Component } from 'react'
 import {  Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 export default class Header extends Component {
-   
+   constructor(props) {
+       super(props)
+   }
 
     render() {
         return (
-            <Navbar bg="dark" expand="lg">
+            <Navbar bg="dark" expand="sm">
                 <Navbar.Brand href="/">
                     <img
                         alt=""
@@ -18,9 +20,9 @@ export default class Header extends Component {
             </Navbar.Brand>
            
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
+              <Nav className="justify-content-end">
                 <Nav.Link href="/">Home</Nav.Link> <br/>
-                <Nav.Link href="/products/tshirts">T-Shirts</Nav.Link>
+                <Nav.Link onClick={() => this.props.setPage('tshirts')}>T-Shirts</Nav.Link>
                 <NavDropdown title="Products" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">T-Shirts</NavDropdown.Item>
                   <NavDropdown.Divider />

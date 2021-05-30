@@ -1,12 +1,15 @@
+import { Component } from 'react'
 
 
-const tshirtTable = (props) =>{
-    // console.log(props)
+
+
+
+const TshirtTable = (props) => { 
+    console.log(props)
     return (
         <table>
             <tbody>
                 {props.tshirts.map(tshirt => {
-                    // console.log(products.product.name)
                     return (
                         <tr key={tshirt._id} >
                             <td>{tshirt.type}</td>
@@ -23,6 +26,7 @@ const tshirtTable = (props) =>{
             </tbody>
         </table>
     )
+
 }
 
-export default tshirtTable
+export default TshirtTable

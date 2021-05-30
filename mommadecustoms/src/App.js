@@ -1,10 +1,12 @@
 import './App.css';
 import React, { Component } from 'react';
 // import { BrowserRouter, Route, Link } from "react-router-dom";
-import ProductTable from './components/productTable';
-import NewProductForm from './components/newProductForm';
+// import ProductTable from './components/productTable';
+// import NewProductForm from './components/newProductForm';
 import Header from './components/Header';
-
+// import TshirtTable from './components/tshirtTable';
+import HomePage from './components/HomePage';
+import TshirtPage from './components/TshirtPage';
 
 
 // Baseurl
@@ -14,8 +16,9 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      page: 'home',
       products: [],
-      thsirts: [],
+      tshirts: [],
       modalOpen: false,
       productToBeEdited: {},
       type: '',
@@ -151,6 +154,7 @@ class App extends Component {
       this.getProducts()
       this.getTshirts()
       
+      
     }
     
     handleChange = (e)=>{
@@ -186,22 +190,34 @@ class App extends Component {
         productToBeEdited: prod
       })
     }
+
+    setPage = (pageName) => {
+      this.setState({
+        page: pageName
+      });
+    };
   
 
   render () {
-    // console.log(this.state.products)
+    let page;
+    if(this.state.page === 'tshirts' ) {
+      page = <TshirtPage tshirts={this.state.tshirts} setPage={this.setPage}/>
+    }
+    else {
+      page = <HomePage setPage={this.setPage}/>
+    }
+
+    console.log(this.state.tshirts)
+
   return (
     <div className="App">
-      <Header />
+      <Header setPage={this.setPage} />
 
-      <ProductTable
-        products={this.state.products}
-        deleteProduct={this.deleteProduct}
-        showEditForm={this.showEditForm}
-      />
-      <NewProductForm baseUrl={ baseUrl } addProduct={ this.addProduct } />
+     {page}
 
       <br/>
+
+     
 
       {this.state.modalOpen &&
 
