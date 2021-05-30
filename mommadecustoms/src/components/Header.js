@@ -9,7 +9,7 @@ export default class Header extends Component {
 
     render() {
         return (
-            <Navbar bg="dark" expand="sm">
+            <Navbar bg="light" expand="md">
                 <Navbar.Brand href="/">
                     <img
                         alt=""
@@ -23,15 +23,10 @@ export default class Header extends Component {
               <Nav className="justify-content-end">
                 <Nav.Link href="/">Home</Nav.Link> <br/>
                 <Nav.Link onClick={() => this.props.setPage('tshirts')}>T-Shirts</Nav.Link>
-                <NavDropdown title="Products" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">T-Shirts</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.2">Sweatshirts</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.3">Hoodies</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">Tank Tops</NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link onClick={() => this.props.setPage('sweatshirts')}>Sweatshirts</Nav.Link>
+                <Nav.Link onClick={() => this.props.setPage('hoodies')}>Hoodies</Nav.Link>
+                <Nav.Link onClick={() => this.props.setPage('tanktops')}>Tanktops</Nav.Link>
+                <Nav.Link onClick={() => this.props.setPage('products')}>All Products</Nav.Link>
               </Nav>
               
             </Navbar.Collapse>

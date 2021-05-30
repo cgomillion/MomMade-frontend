@@ -4,13 +4,23 @@ import React, { Component } from 'react';
 // import ProductTable from './components/productTable';
 // import NewProductForm from './components/newProductForm';
 import Header from './components/Header';
-// import TshirtTable from './components/tshirtTable';
 import HomePage from './components/HomePage';
-import TshirtPage from './components/TshirtPage';
+import TshirtPage from './pages/TshirtPage';
+import SweatshirtPage from './pages/SweatshirtPage';
+import HoodiePage from './pages/HoodiePage';
+import Tanktops from './pages/TanktopPage';
+import AllProducts from './pages/AllProductsPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 // Baseurl
-let baseUrl = 'http://localhost:3005'
+let baseUrl = ''
+
+if (process.env.NODE_ENV === 'development') {
+  baseUrl = 'http://localhost:3005'
+} else {
+  baseUrl = 'https://monstera-language-academy-be.herokuapp.com'
+}
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +29,9 @@ class App extends Component {
       page: 'home',
       products: [],
       tshirts: [],
-      modalOpen: false,
+      sweatshirts: [],
+      hoodies: [],
+      tanktops: [],
       productToBeEdited: {},
       type: '',
       product: {
@@ -75,6 +87,68 @@ class App extends Component {
      
   }
 
+  getSweatshirts = () => {
+    // fetch call to the server (backend)
+    fetch(baseUrl + "/products/sweatshirts",{
+      credentials: "include"
+    })
+    .then(res => { 
+      if (res.status===200){
+        return res.json()
+      }
+      else {
+        return []
+      }
+    }).then(data => {
+      this.setState({
+        sweatshirts: data,
+      })
+      
+     })
+     
+  }
+
+  getHoodies = () => {
+    // fetch call to the server (backend)
+    fetch(baseUrl + "/products/hoodies",{
+      credentials: "include"
+    })
+    .then(res => { 
+      if (res.status===200){
+        return res.json()
+      }
+      else {
+        return []
+      }
+    }).then(data => {
+      this.setState({
+        hoodies: data,
+      })
+      
+     })
+     
+  }
+
+  getTanktops = () => {
+    // fetch call to the server (backend)
+    fetch(baseUrl + "/products/tanktops",{
+      credentials: "include"
+    })
+    .then(res => { 
+      if (res.status===200){
+        return res.json()
+      }
+      else {
+        return []
+      }
+    }).then(data => {
+      this.setState({
+        tanktops: data,
+      })
+      
+     })
+     
+  }
   addProduct = (newProduct) => {
     const copyProducts = [...this.state.products]
     copyProducts.push(newProduct)
@@ -153,8 +227,9 @@ class App extends Component {
     componentDidMount() {
       this.getProducts()
       this.getTshirts()
-      
-      
+      this.getSweatshirts()
+      this.getHoodies()
+      this.getTanktops()
     }
     
     handleChange = (e)=>{
@@ -203,11 +278,23 @@ class App extends Component {
     if(this.state.page === 'tshirts' ) {
       page = <TshirtPage tshirts={this.state.tshirts} setPage={this.setPage}/>
     }
+    else if(this.state.page === 'sweatshirts') {
+      page = <SweatshirtPage sweatshirts={this.state.sweatshirts} setPage={this.setPage} />
+    }
+    else if(this.state.page === 'hoodies') {
+      page = <HoodiePage hoodies={this.state.hoodies} setPage={this.setPage} />
+    }
+    else if(this.state.page === 'tanktops') {
+      page = <Tanktops tanktops={this.state.tanktops} setPage={this.setPage} />
+    }
+    else if(this.state.page === 'products') {
+      page = <AllProducts products={this.state.products} setPage={this.setPage} />
+    }
     else {
       page = <HomePage setPage={this.setPage}/>
     }
 
-    console.log(this.state.tshirts)
+    console.log(this.state.hoodies)
 
   return (
     <div className="App">
@@ -219,21 +306,7 @@ class App extends Component {
 
      
 
-      {this.state.modalOpen &&
-
-  <form onSubmit={this.handleSubmit}>
-  <label>Edit Product : </label> <br/>
-  <input name="type" value={this.state.type} onChange={this.handleChange}/> <br/>
-  <input name="name" value={this.state.product.name} onChange={this.handleChange}/> <br/>
-  <input name="description" value={this.state.product.description} onChange={this.handleChange}/> <br/>
-  <input name="brand" value={this.state.product.brand} onChange={this.handleChange}/> <br/>
-  <input name="color" value={this.state.product.color} onChange={this.handleChange}/> <br/>
-  <input name="size" value={this.state.product.size} onChange={this.handleChange}/> <br/>
-  <input name="price" value={this.state.product.price} onChange={this.handleChange}/> <br/>
-    <button>Submit Changes</button>
-
-</form>
-}
+ 
 
     </div>
     );
