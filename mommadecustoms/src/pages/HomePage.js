@@ -38,7 +38,9 @@ class Home extends Component {
 </Carousel>
                 </div>
                 <div id="about-mom-made">
-                    <p>Test about Mom Made</p>
+                    <p>Hello All! Thank you for taking the time to check out my shop if you have any questions don’t be shy to ask. At this time PLEASE keep in mind due to COVID delivery times can be delayed.
+
+                    I am currently working on bundle deals and new options for the shop. If you have any ideas shoot me a message. 😁</p>
                 </div>
                 <div id="collections">
 

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // import ProductTable from './components/productTable';
 // import NewProductForm from './components/newProductForm';
 import Header from './components/Header';
-import HomePage from './components/HomePage';
+import HomePage from './pages/HomePage';
 import TshirtPage from './pages/TshirtPage';
 import SweatshirtPage from './pages/SweatshirtPage';
 import HoodiePage from './pages/HoodiePage';
@@ -294,7 +294,6 @@ class App extends Component {
       page = <HomePage setPage={this.setPage}/>
     }
 
-    console.log(this.state.hoodies)
 
   return (
     <div className="App">
