@@ -5,3 +5,24 @@
 #about-mom-made {
   text-align: center;
 }
+
+#github-logo {
+  height: 30px;
+  width: 30px;
+}
+
+#linkedin-logo {
+  height: 30px;
+  width: 30px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(33, 37, 41,1);
+  width: 100%;
+}
+
+.mainfooter {
+  margin-bottom: 1rem;
+}

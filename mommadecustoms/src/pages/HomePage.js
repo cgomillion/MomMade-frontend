@@ -16,23 +16,27 @@ class Home extends Component {
                 <Carousel>
   <Carousel.Item>
     <img
-      className="d-block w-100"
+      className="d-block w-100 "
       src="https://i.etsystatic.com/17860400/r/il/ad52a4/2692769080/il_1588xN.2692769080_l4mk.jpg"
       alt="First slide"
+      height="600px"
     />
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100"
+      className="d-block w-100 "
       src="https://i.etsystatic.com/17860400/r/il/fbb161/2369504624/il_1588xN.2369504624_k7t5.jpg"
       alt="Second slide"
+      height="600px"
     />
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100"
+      className="d-block w-100 "
       src="https://i.etsystatic.com/17860400/r/il/d8e9b4/1878590835/il_1588xN.1878590835_lpls.jpg"
       alt="Third slide"
+      height="600px"
+      
     />
   </Carousel.Item>
 </Carousel>
