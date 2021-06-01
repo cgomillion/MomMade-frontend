@@ -1,9 +1,13 @@
 .App {
   text-align: center;
+  
 }
 
 #about-mom-made {
-  text-align: center;
+  
+  /* width: 600px; */
+  display: flex;
+  
 }
 
 #github-logo {
@@ -17,12 +21,20 @@
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  
   background-color: rgba(33, 37, 41,1);
   width: 100%;
 }
 
-.mainfooter {
-  margin-bottom: 1rem;
+#about-text1 {
+  width: 60%;
+  margin-left: 20%;
+
+    
 }
+
+#about-socials {
+  justify-content: space-around;
+
+}
+

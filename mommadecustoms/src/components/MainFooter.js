@@ -5,13 +5,13 @@ import {  Navbar, Nav, Container, Row, Col, Image } from 'react-bootstrap'
 function Footer(props) {
   return(
     <div className="footer">
-      <Navbar bg="dark" variant="dark" expand="md" fixed="bottom">
+      <Navbar bg="dark" variant="dark" expand="sm" fixed="bottom">
                 <Navbar.Brand href="/" className="justify-content-center">
                     <img
                         alt=""
                         src="https://i.etsystatic.com/isla/aa4c64/34539361/isla_500x500.34539361_71uzp77a.jpg?version=0"
-                        width="160"
-                        height="180"
+                        width="30"
+                        height="30"
                         /> 
             </Navbar.Brand>
            

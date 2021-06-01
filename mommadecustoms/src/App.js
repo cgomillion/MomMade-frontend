@@ -22,7 +22,7 @@ let baseUrl = ''
 if (process.env.NODE_ENV === 'development') {
   baseUrl = 'http://localhost:3005'
 } else {
-  baseUrl = 'https://monstera-language-academy-be.herokuapp.com'
+  // heroku
 }
 
 class App extends Component {

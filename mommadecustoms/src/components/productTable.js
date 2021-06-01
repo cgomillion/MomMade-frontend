@@ -1,31 +1,40 @@
 
 
 
-const ProductTable = (props) =>{
-    // console.log(props)
+const ProductTable = (props) => {
+    
     return (
-        <table>
-            <tbody>
+        <div className="product-div">
+        
                 {props.products.map(products => {
                     // console.log(products.product.name)
                     return (
-                        <tr key={products._id} >
-                            <td>{products.type}</td>
-                            <td>{products.product.name}</td>
-                            <td>{products.product.brand}</td>
-                            <td>{products.product.color}</td>
-                            <td>{products.product.size}</td>
-                            <td>{products.product.description}</td>
-                            <td>{products.product.price}</td>
-                            <td onClick={() => props.deleteProduct(products._id)}>|X|</td>
-                            <td onClick={() => props.showEditForm(products)}>edit</td>
-                        </tr>
+                        <div key={products.id} className="item-div">
+                            <img className="product-img" alt='' src={products.product.img}/>
+                        
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>{products.type}</td>
+                                    <td>{products.product.name}</td>
+                                    <td>{products.product.brand}</td>
+                                    <td>{products.product.color}</td>
+                                    <td>{products.product.size}</td>
+                                    <td>{products.product.description}</td>
+                                    <td>{products.product.price}</td>
+                                    
+                                    
+                                </tr>
+                        </tbody>
+                        </table>
+                        </div>
                         )
                     })
                 }
-            </tbody>
-        </table>
+           
+        </div>
     )
 }
+
 
 export default ProductTable
