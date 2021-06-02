@@ -10,8 +10,8 @@ function Footer(props) {
                     <img
                         alt=""
                         src="https://i.etsystatic.com/isla/aa4c64/34539361/isla_500x500.34539361_71uzp77a.jpg?version=0"
-                        width="30"
-                        height="30"
+                        width="80"
+                        height="80"
                         /> 
             </Navbar.Brand>
            

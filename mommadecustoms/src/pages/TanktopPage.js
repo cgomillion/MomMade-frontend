@@ -1,18 +1,13 @@
-import { Component } from 'react';
+
 import TanktopTable from '../components/tanktopTable';
 
-export default class Tanktops extends Component {
-    constructor(props) {
-        super(props)
-
-        
-    }
-
-   render() {
-       
+ const Tanktops = (props) => {
+   
         return (
             <TanktopTable 
-                tanktops = {this.props.tanktops} 
+                tanktops = {props.tanktops} 
             />)
-    }
+    
 };
+
+export default Tanktops

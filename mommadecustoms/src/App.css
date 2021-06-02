@@ -4,8 +4,9 @@
 }
 .product-div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-evenly ;
   flex-wrap: wrap;
+  flex-flow: wrap;
 }
 
 #about-mom-made {
@@ -39,7 +40,8 @@
 }
 
 #about-socials {
-  justify-content: space-around;
+  display: flex;
+  justify-content: space-evenly ;
 
 }
 #collections-div {

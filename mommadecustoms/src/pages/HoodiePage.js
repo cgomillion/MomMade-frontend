@@ -1,18 +1,19 @@
-import { Component } from 'react';
+
 import HoodieTable from '../components/hoodieTable';
 
-export default class Hoodies extends Component {
-    constructor(props) {
-        super(props)
-
-        
-    }
-
-   render() {
+ const Hoodies = (props) => {
+    
+ 
        
         return (
             <HoodieTable 
-                hoodies = {this.props.hoodies} 
-            />)
-    }
+                hoodies = {props.hoodies} 
+            />
+            
+            )
+            
+
+    
 };
+
+export default Hoodies

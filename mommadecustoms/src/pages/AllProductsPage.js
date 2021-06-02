@@ -73,7 +73,7 @@ export default class AllProducts extends Component {
                   size: e.target.size.value,
                   color: e.target.color.value,
                   price: e.target.price.value,
-                  img: e.target.img.value
+                  img: e.target.img.value,
                 }
                  
               }),
@@ -156,7 +156,7 @@ export default class AllProducts extends Component {
                 <input name="color" value={this.state.product.color} onChange={this.handleChange}/> <br/>
                 <input name="size" value={this.state.product.size} onChange={this.handleChange}/> <br/>
                 <input name="price" value={this.state.product.price} onChange={this.handleChange}/> <br/>
-                <input name="imgURL" value={this.state.product.img} onChange={this.handleChange}/> <br/>
+                <input name="img" value={this.state.product.img} onChange={this.handleChange}/> <br/>
                 <button>Submit Changes</button>
 
                 </form>}

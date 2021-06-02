@@ -1,7 +1,5 @@
 import './App.css';
 import React, { Component } from 'react';
-// import { BrowserRouter, Route, Link } from "react-router-dom";
-// import ProductTable from './components/productTable';
 // import NewProductForm from './components/newProductForm';
 import Header from './components/Header';
 import Footer from './components/MainFooter';
@@ -205,6 +203,16 @@ class App extends Component {
       <Header username={this.state.username} setUser={this.setUser} setPage={this.setPage} />
 
      {page}
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
      <Footer setPage={this.setPage}/>
      
 

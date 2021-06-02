@@ -1,18 +1,12 @@
-import { Component } from 'react';
+
 import SweatshirtTable from '../components/sweatshirtTable';
 
-export default class Sweatshirts extends Component {
-    constructor(props) {
-        super(props)
-
-        
-    }
-
-   render() {
-       
+ const Sweatshirts = (props) => {
         return (
             <SweatshirtTable 
-            sweatshirts = {this.props.sweatshirts} 
+            sweatshirts = {props.sweatshirts} 
             />)
-    }
+    
 };
+
+export default Sweatshirts

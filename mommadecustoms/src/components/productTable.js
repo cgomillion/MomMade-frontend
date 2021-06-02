@@ -12,15 +12,17 @@ const Products = (props) => {
                         <div key={products.id} className="item-div">
                             
 
-                        <Card style={{ width: '18rem' }}>
+                        <Card border="dark" bg="success" style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={products.product.img} />
                             <Card.Body>
                               <Card.Title>{products.product.name}</Card.Title>
                              
                             </Card.Body>
-                            <ListGroup className="list-group-flush">
+                            <ListGroup  className="list-group-flush">
                               <ListGroupItem>Price: {products.product.price}</ListGroupItem>
                               <ListGroupItem>Brand: {products.product.brand} </ListGroupItem>
+                              <ListGroupItem onClick={()=>props.deleteProduct(products._id)}> Remove </ListGroupItem>
+                              <ListGroupItem onClick={()=>props.showEditForm(products)}> Edit </ListGroupItem>
                             </ListGroup>
                         </Card>
 
