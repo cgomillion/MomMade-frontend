@@ -49,3 +49,13 @@
   justify-content: space-around;
 }
 
+#register-form {
+  display: flex;
+  justify-content: center;
+   
+}
+
+#login-form {
+  display: flex;
+  justify-content: center;
+}

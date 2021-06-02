@@ -17,6 +17,8 @@ export default class AllProducts extends Component {
 
         this.state ={ 
             modalOpen: false,
+            productModalOpen: false,
+            productToBeShown: {},
             productToBeEdited: {},
             type: '',
             product: {
@@ -100,7 +102,7 @@ export default class AllProducts extends Component {
         }
 
     handleChange = (e)=>{
-        console.log(e.target)
+        // console.log(e.target)
         this.setState({
           [e.target.type]: e.target.value,
           product: {
@@ -134,6 +136,8 @@ export default class AllProducts extends Component {
           productToBeEdited: prod
         })
       }
+
+    
 
    render() {
        

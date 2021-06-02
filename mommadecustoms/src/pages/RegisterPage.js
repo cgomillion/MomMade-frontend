@@ -56,7 +56,7 @@ class Register extends Component {
     return(
       <div id="register-container">
         <h1>Register / Signup</h1>
-        <Form onSubmit={this.registerUser}>
+        <Form id="register-form" onSubmit={this.registerUser}>
           <Form.Group controlId="username">
             <Form.Control
               required
@@ -65,6 +65,7 @@ class Register extends Component {
               onChange={this.handleChange}
             />
           </Form.Group>
+            
 
           <Form.Group controlId="password">
             <Form.Control
@@ -79,6 +80,15 @@ class Register extends Component {
             Register User
           </Button>
         </Form>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       </div>
     )
   }
