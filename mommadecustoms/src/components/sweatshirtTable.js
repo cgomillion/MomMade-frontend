@@ -1,36 +1,36 @@
-import React, { Component } from 'react'
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
-class SweatshirtTable extends Component { 
-    constructor(props) {
-        super(props)
-    }
-
-    render(){
+const Sweatshirts = (props) => {
+    
     return (
         <div className="product-div">
-        <table>
-            <tbody>
-                {this.props.sweatshirts.map(sweatshirt => {
+        
+                {props.sweatshirts.map(sweatshirt => {
+                    // console.log(products.product.name)
                     return (
-                        
-                        <tr key={sweatshirt._id} >
-                            <td>{sweatshirt.type}</td>
-                            <td>{sweatshirt.product.name}</td>
-                            <td>{sweatshirt.product.brand}</td>
-                            <td>{sweatshirt.product.color}</td>
-                            <td>{sweatshirt.product.size}</td>
-                            <td>{sweatshirt.product.description}</td>
-                            <td>{sweatshirt.product.price}</td>
-                            <img className="product-img" alt='' src={sweatshirt.product.img} />
-                        </tr>
+                        <div key={sweatshirt.id} className="item-div">
+                            
+
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={sweatshirt.product.img} />
+                            <Card.Body>
+                              <Card.Title>{sweatshirt.product.name}</Card.Title>
+                             
+                            </Card.Body>
+                            <ListGroup className="list-group-flush">
+                              <ListGroupItem>Price: {sweatshirt.product.price}</ListGroupItem>
+                              <ListGroupItem>Brand: {sweatshirt.product.brand} </ListGroupItem>
+                            </ListGroup>
+                        </Card>
+
+                        </div>
                         )
                     })
                 }
-            </tbody>
-        </table>
+           
         </div>
     )
 }
-}
 
-export default SweatshirtTable
+
+export default Sweatshirts

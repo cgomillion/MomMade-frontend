@@ -1,7 +1,7 @@
 
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
-
-const ProductTable = (props) => {
+const Products = (props) => {
     
     return (
         <div className="product-div">
@@ -10,23 +10,20 @@ const ProductTable = (props) => {
                     // console.log(products.product.name)
                     return (
                         <div key={products.id} className="item-div">
-                            <img className="product-img" alt='' src={products.product.img}/>
-                        
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>{products.type}</td>
-                                    <td>{products.product.name}</td>
-                                    <td>{products.product.brand}</td>
-                                    <td>{products.product.color}</td>
-                                    <td>{products.product.size}</td>
-                                    <td>{products.product.description}</td>
-                                    <td>{products.product.price}</td>
-                                    
-                                    
-                                </tr>
-                        </tbody>
-                        </table>
+                            
+
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={products.product.img} />
+                            <Card.Body>
+                              <Card.Title>{products.product.name}</Card.Title>
+                             
+                            </Card.Body>
+                            <ListGroup className="list-group-flush">
+                              <ListGroupItem>Price: {products.product.price}</ListGroupItem>
+                              <ListGroupItem>Brand: {products.product.brand} </ListGroupItem>
+                            </ListGroup>
+                        </Card>
+
                         </div>
                         )
                     })
@@ -37,4 +34,4 @@ const ProductTable = (props) => {
 }
 
 
-export default ProductTable
+export default Products

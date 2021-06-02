@@ -88,6 +88,60 @@ class Home extends Component {
 
                 
                 <div id="about-mom-made-img">
+                <Carousel>
+  <Carousel.Item>
+    <img
+      className="center w-60 "
+      src="https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.6435-9/118623166_902822896909822_4135547299520419873_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=973b4a&_nc_ohc=YwH3TrWKf64AX-b8NKN&_nc_ht=scontent.fhsv1-1.fna&oh=3a44a65b438dba92106df92c27e51f0a&oe=60DB426B"
+      alt="First slide"
+      height="500px"
+      widith="500px"
+    />
+    
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="center w-60 "
+      src="https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.6435-9/95254042_811441786047934_2111947818737336320_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=973b4a&_nc_ohc=uR5SpCov7eQAX8A0QP4&_nc_ht=scontent.fhsv1-1.fna&oh=a559f784e3d0d926c2d2804cc5aebcc4&oe=60DE3EEA"
+      alt="Second slide"
+      height="500px"
+      width="500px"
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="center w-60 "
+      src="https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.6435-9/101987865_836258413566271_3603191701205680128_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=973b4a&_nc_ohc=HV9HXvSXA4gAX-4CQ-X&_nc_ht=scontent.fhsv1-1.fna&oh=2ef735ae2de6805af11e37b3ac67f75d&oe=60DD9E47"
+      alt="Third slide"
+      height="500px"
+      width="500px"
+      
+      
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="center w-60 "
+      src="https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.6435-9/82148024_730847740774006_3831062333556260864_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=973b4a&_nc_ohc=G1yCkgETuCsAX-ev72l&_nc_ht=scontent.fhsv1-1.fna&oh=ea8873416bb73082a34dd1092fab2688&oe=60DBFC9C"
+      alt="Fourth slide"
+      height="500px"
+      width="500px"
+      
+      
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="center w-65 "
+      src="https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.6435-9/80105221_705896676602446_8379396974482292736_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=973b4a&_nc_ohc=kl8LnnLOrCMAX_kPi1r&_nc_ht=scontent.fhsv1-1.fna&oh=ab61f22027a0f3db657cfcdb6ccfa14d&oe=60DC7CAC"
+      alt="Fifth slide"
+      height="500px"
+      width="500px"
+      
+      
+    />
+  </Carousel.Item>
+</Carousel>
                  
                 </div>
                 <br/>
@@ -96,8 +150,10 @@ class Home extends Component {
                 <h1> Collections </h1>
                 <br/>
                 <br/>
+                <div id="collections-div">
                 <div id="collections">
                 <i onDoubleClick={()=> this.props.setPage('tshirts')} >
+                  <h2>T-Shirts</h2>
                      <Image id="tshirt-collec-img" 
                             src="https://i.etsystatic.com/17860400/r/il/4a1064/2790314765/il_1588xN.2790314765_ckr7.jpg" 
                             height="300px"
@@ -105,27 +161,37 @@ class Home extends Component {
                             alt='T-Shirts'
                             roundedCircle />
                     </i>
+                    </div>
+                    <div id="collections">
                     <i onDoubleClick={()=> this.props.setPage('sweatshirts')} >
+                      <h2>Sweatshirts</h2>
                      <Image id="sweatshirt-collec-img" 
                             src="https://i.etsystatic.com/17860400/r/il/6ed783/2692755938/il_1588xN.2692755938_rwmj.jpg" 
                             height="300px"
                             width="300px"
                             roundedCircle />
                     </i>
+                    </div>
+                    <div id="collections">
                     <i onDoubleClick={()=> this.props.setPage('hoodies')} >
+                      <h2>Hoodies</h2>
                      <Image id="hoodie-collec-img" 
                             src="https://i.etsystatic.com/17860400/r/il/4ce819/2369498554/il_1588xN.2369498554_tfiw.jpg" 
                             height="300px"
                             width="300px"
                             roundedCircle />
                     </i>
+                    </div>
+                    <div id="collections">
                     <i onDoubleClick={()=> this.props.setPage('tanktops')} >
+                      <h2>Tank Tops</h2>
                      <Image id="tanktop-collec-img" 
                             src="https://i.etsystatic.com/17860400/r/il/c5856b/2139843160/il_1588xN.2139843160_hat4.jpg" 
                             height="300px"
                             width="300px"
                             roundedCircle />
                     </i>
+                </div>
                 </div>
                 <br/>
                 <br/>

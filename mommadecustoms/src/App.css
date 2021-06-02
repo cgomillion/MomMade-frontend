@@ -2,6 +2,11 @@
   text-align: center;
   
 }
+.product-div {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 
 #about-mom-made {
   
@@ -36,5 +41,9 @@
 #about-socials {
   justify-content: space-around;
 
+}
+#collections-div {
+  display: flex;
+  justify-content: space-around;
 }
 

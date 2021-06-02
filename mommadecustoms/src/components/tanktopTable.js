@@ -1,33 +1,36 @@
-const TanktopTable = (props) => { 
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+
+const Tanktops = (props) => {
     
     return (
         <div className="product-div">
         
-                {props.tanktops.map(tanktop => {
+                {props.tanktops.map(tanks => {
+                    // console.log(products.product.name)
                     return (
-                        <table>
-                        <tbody>
-                        <div className="product-div">
-                        <tr key={tanktop._id} >
-                            <td>{tanktop.type}</td>
-                            <td>{tanktop.product.name}</td>
-                            <td>{tanktop.product.brand}</td>
-                            <td>{tanktop.product.color}</td>
-                            <td>{tanktop.product.size}</td>
-                            <td>{tanktop.product.description}</td>
-                            <td>{tanktop.product.price}</td>
-                            <img className="product-img" alt='' src={tanktop.product.img} />
-                        </tr>
+                        <div key={tanks.id} className="item-div">
+                            
+
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={tanks.product.img} />
+                            <Card.Body>
+                              <Card.Title>{tanks.product.name}</Card.Title>
+                             
+                            </Card.Body>
+                            <ListGroup className="list-group-flush">
+                              <ListGroupItem>Price: {tanks.product.price}</ListGroupItem>
+                              <ListGroupItem>Brand: {tanks.product.brand} </ListGroupItem>
+                            </ListGroup>
+                        </Card>
+
                         </div>
-                        </tbody>
-                        </table>
                         )
                     })
                 }
-        
+           
         </div>
     )
-
 }
 
-export default TanktopTable
+
+export default Tanktops

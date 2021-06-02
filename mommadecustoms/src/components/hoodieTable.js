@@ -1,32 +1,36 @@
-const HoodieTable = (props) => { 
-    console.log(props)
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+
+const Hoodies = (props) => {
+    
     return (
         <div className="product-div">
-        <table>
-            <tbody>
-                {props.hoodies.map(hoodie => {
+        
+                {props.hoodies.map(hood => {
+                    // console.log(products.product.name)
                     return (
-                        <div className="product-div">
-                        <tr key={hoodie._id} >
-                            <td>{hoodie.type}</td>
-                            <td>{hoodie.product.name}</td>
-                            <td>{hoodie.product.brand}</td>
-                            <td>{hoodie.product.color}</td>
-                            <td>{hoodie.product.size}</td>
-                            <td>{hoodie.product.description}</td>
-                            <td>{hoodie.product.price}</td>
+                        <div key={hood.id} className="item-div">
                             
-                        </tr>
-                        <img className="product-img" alt='' src={hoodie.product.img} />
+
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={hood.product.img} />
+                            <Card.Body>
+                              <Card.Title>{hood.product.name}</Card.Title>
+                             
+                            </Card.Body>
+                            <ListGroup className="list-group-flush">
+                              <ListGroupItem>Price: {hood.product.price}</ListGroupItem>
+                              <ListGroupItem>Brand: {hood.product.brand} </ListGroupItem>
+                            </ListGroup>
+                        </Card>
+
                         </div>
                         )
                     })
                 }
-            </tbody>
-        </table>
+           
         </div>
     )
-
 }
 
-export default HoodieTable
+
+export default Hoodies

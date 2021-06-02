@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import ProductTable from '../components/productTable';
+import Products from '../components/productTable';
 
 
 // Baseurl
@@ -26,6 +26,7 @@ export default class AllProducts extends Component {
             color: '',
             size: '',
             price: '',
+            img: '',
         }
     }  
     }
@@ -41,10 +42,10 @@ export default class AllProducts extends Component {
     
           if (response.status===200){
     
-            const findIndex = this.state.products.findIndex(product => product._id === id)
-            const copyProducts = [...this.state.products]
+            const findIndex = this.props.products.findIndex(product => product._id === id)
+            const copyProducts = [...this.props.products]
             copyProducts.splice(findIndex, 1)
-            console.log(`Deleted product at index: ${findIndex} `)
+            console.log(`Deleted product: ${findIndex} `)
                 
             this.setState({
               products: copyProducts
@@ -72,6 +73,7 @@ export default class AllProducts extends Component {
                   size: e.target.size.value,
                   color: e.target.color.value,
                   price: e.target.price.value,
+                  img: e.target.img.value
                 }
                  
               }),
@@ -83,8 +85,8 @@ export default class AllProducts extends Component {
       
             if (response.status===200){
               const updatedProduct = await response.json()
-              const findIndex = this.state.products.findIndex(prod => prod._id === updatedProduct.data._id)
-              const copyProducts = [...this.state.products]
+              const findIndex = this.props.products.findIndex(prod => prod._id === updatedProduct.data._id)
+              const copyProducts = [...this.props.products]
               copyProducts[findIndex] = updatedProduct.data
               this.setState({
                 products: copyProducts,
@@ -100,7 +102,7 @@ export default class AllProducts extends Component {
     handleChange = (e)=>{
         console.log(e.target)
         this.setState({
-          [e.target.name]: e.target.value,
+          [e.target.type]: e.target.value,
           product: {
             [e.target.name]: e.target.value,
             [e.target.description]: e.target.value,
@@ -108,6 +110,7 @@ export default class AllProducts extends Component {
             [e.target.size]: e.target.value,
             [e.target.color]: e.target.value,
             [e.target.price]: e.target.value,
+            [e.target.img]: e.target.value,
           }
         })
       }
@@ -126,6 +129,7 @@ export default class AllProducts extends Component {
             size: prod.product.size,
             color: prod.product.color,
             price: prod.product.price,
+            img: prod.product.img
           },
           productToBeEdited: prod
         })
@@ -135,7 +139,7 @@ export default class AllProducts extends Component {
        
         return (
             <div>
-            <ProductTable 
+            <Products 
                 products = {this.props.products} 
                 deleteProduct={this.deleteProduct} 
                 showEditForm={this.showEditForm} 
@@ -152,6 +156,7 @@ export default class AllProducts extends Component {
                 <input name="color" value={this.state.product.color} onChange={this.handleChange}/> <br/>
                 <input name="size" value={this.state.product.size} onChange={this.handleChange}/> <br/>
                 <input name="price" value={this.state.product.price} onChange={this.handleChange}/> <br/>
+                <input name="imgURL" value={this.state.product.img} onChange={this.handleChange}/> <br/>
                 <button>Submit Changes</button>
 
                 </form>}

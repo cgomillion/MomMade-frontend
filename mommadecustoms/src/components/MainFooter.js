@@ -5,7 +5,7 @@ import {  Navbar, Nav, Container, Row, Col, Image } from 'react-bootstrap'
 function Footer(props) {
   return(
     <div className="footer">
-      <Navbar bg="dark" variant="dark" expand="sm" fixed="bottom">
+      <Navbar bg="dark" variant="dark" expand="sm" >
                 <Navbar.Brand href="/" className="justify-content-center">
                     <img
                         alt=""

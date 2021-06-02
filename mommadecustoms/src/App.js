@@ -206,7 +206,7 @@ class App extends Component {
 
      {page}
      <Footer setPage={this.setPage}/>
-     <Footer />
+     
 
     </div>
     );

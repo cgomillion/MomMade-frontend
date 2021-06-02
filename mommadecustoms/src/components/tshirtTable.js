@@ -1,38 +1,36 @@
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
-
-
-
-
-
-const TshirtTable = (props) => { 
-    console.log(props)
+const Tshirts = (props) => {
+    
     return (
         <div className="product-div">
-        <table>
-            <tbody>
-                {props.tshirts.map(tshirt => {
+        
+                {props.tshirts.map(tee => {
+                    // console.log(products.product.name)
                     return (
-                        <div className="product-div">
-                        <tr key={tshirt._id} >
-                            <td>{tshirt.type}</td>
-                            <td>{tshirt.product.name}</td>
-                            <td>{tshirt.product.brand}</td>
-                            <td>{tshirt.product.color}</td>
-                            <td>{tshirt.product.size}</td>
-                            <td>{tshirt.product.description}</td>
-                            <td>{tshirt.product.price}</td>
+                        <div key={tee.id} className="item-div">
                             
-                        </tr>
+
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={tee.product.img} />
+                            <Card.Body>
+                              <Card.Title>{tee.product.name}</Card.Title>
+                             
+                            </Card.Body>
+                            <ListGroup className="list-group-flush">
+                              <ListGroupItem>Price: {tee.product.price}</ListGroupItem>
+                              <ListGroupItem>Brand: {tee.product.brand} </ListGroupItem>
+                            </ListGroup>
+                        </Card>
+
                         </div>
                         )
                     })
                 }
-            </tbody>
-        </table>
-        
+           
         </div>
     )
-
 }
 
-export default TshirtTable
+
+export default Tshirts

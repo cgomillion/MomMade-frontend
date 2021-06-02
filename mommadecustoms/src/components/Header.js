@@ -33,7 +33,7 @@ export default class Header extends Component {
   }
     render() {
         return (
-            <Navbar bg="light" variant="light" expand="md">
+            <Navbar bg="success" variant="dark" expand="md">
                 <Navbar.Brand href="/">
                     <img
                         alt=""
@@ -45,12 +45,13 @@ export default class Header extends Component {
            
             <Navbar.Collapse className="justify-content-start">
               <Nav className="justify-content-start">
-                <Nav.Link href="/">Home</Nav.Link> <br/>
-                <Nav.Link onClick={() => this.props.setPage('tshirts')}>T-Shirts</Nav.Link>
-                <Nav.Link onClick={() => this.props.setPage('sweatshirts')}>Sweatshirts</Nav.Link>
-                <Nav.Link onClick={() => this.props.setPage('hoodies')}>Hoodies</Nav.Link>
-                <Nav.Link onClick={() => this.props.setPage('tanktops')}>Tanktops</Nav.Link>
-                <Nav.Link onClick={() => this.props.setPage('products')}>All Products</Nav.Link>
+                <Nav.Link as="h3" href="/">Home</Nav.Link> <br/>
+                <Nav.Link as="h3" onClick={() => this.props.setPage('tshirts')}>T-Shirts</Nav.Link>
+                <Nav.Link as="h3" onClick={() => this.props.setPage('sweatshirts')}>Sweatshirts</Nav.Link>
+                <Nav.Link as="h3" onClick={() => this.props.setPage('hoodies')}>Hoodies</Nav.Link>
+                <Nav.Link as="h3" onClick={() => this.props.setPage('tanktops')}>Tanktops</Nav.Link>
+                <Nav.Link as="h3" onClick={() => this.props.setPage('products')}>All Products</Nav.Link>
+                <Nav.Link as="h3" href="#disabled" disabled>Create-Your-Own <br/> Coming Soon!</Nav.Link>
               </Nav>
               </Navbar.Collapse>
               <Navbar.Collapse className="justify-content-end">
