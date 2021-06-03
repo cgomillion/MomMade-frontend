@@ -15,7 +15,6 @@ import AllProducts from './pages/AllProductsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
 // Baseurl
 let baseUrl = ''
 
