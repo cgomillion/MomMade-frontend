@@ -163,7 +163,6 @@ class App extends Component {
         page: pageName
       });
     };
-  
 
   render () {
     let page;
