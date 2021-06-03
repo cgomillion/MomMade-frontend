@@ -196,7 +196,6 @@ class App extends Component {
       page = <HomePage setPage={this.setPage}/>
     }
 
-
   return (
     <div className="App">
       <Header username={this.state.username} setUser={this.setUser} setPage={this.setPage} />
