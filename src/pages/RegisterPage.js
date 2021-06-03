@@ -6,7 +6,7 @@ let baseUrl = ''
 if (process.env.NODE_ENV === 'development') {
   baseUrl = 'http://localhost:3005'
 } else {
-  baseUrl = 'https://git.heroku.com/proj4-mommadecustoms-api.git'
+  baseUrl = 'https://proj4-mommadecustoms-api.herokuapp.com/'
 }
 class Register extends Component {
   constructor(props) {

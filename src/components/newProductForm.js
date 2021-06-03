@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 export default class NewProductForm extends Component {
   constructor (props) {
     super(props)
