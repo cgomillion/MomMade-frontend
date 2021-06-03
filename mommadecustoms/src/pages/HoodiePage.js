@@ -6,9 +6,13 @@ import HoodieTable from '../components/hoodieTable';
  
        
         return (
+            <>
+            <h1>Hoodies</h1>
             <HoodieTable 
                 hoodies = {props.hoodies} 
             />
+            </>
+            
             
             )
             

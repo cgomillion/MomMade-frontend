@@ -20,8 +20,8 @@ if (process.env.NODE_ENV === 'development') {
 
       if (response.status === 200) {
         console.log("User has been logged out")
-        this.props.setUser('')
-        this.props.setPage('home')
+        props.setUser('')
+        props.setPage('home')
       }
     }
     catch (err) {

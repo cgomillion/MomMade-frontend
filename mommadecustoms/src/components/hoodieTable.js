@@ -11,7 +11,7 @@ const Hoodies = (props) => {
                         <div key={hood.id} className="item-div">
                             
 
-                        <Card style={{ width: '18rem' }}>
+                        <Card border="dark" bg="success" style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={hood.product.img} />
                             <Card.Body>
                               <Card.Title>{hood.product.name}</Card.Title>

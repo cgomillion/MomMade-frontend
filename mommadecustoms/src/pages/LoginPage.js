@@ -48,9 +48,13 @@ class LoginPage extends Component {
       if (response.status === 200) {
         console.log("User is Logged In")
         this.props.setUser(this.state.username)
+        if (this.state.username === 'corey') {
+            this.props.setPage('admin')
+        } 
         this.props.setPage('home')
+        
        
-      }
+    }
     }
     catch (err) {
       console.log('Error => ', err);

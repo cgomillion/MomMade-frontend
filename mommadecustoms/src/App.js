@@ -1,17 +1,19 @@
 import './App.css';
 import React, { Component } from 'react';
-// import NewProductForm from './components/newProductForm';
 import Header from './components/Header';
 import Footer from './components/MainFooter';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
+import AllProductsAdmin from './pages/AdminPage';
+import CartPage from './pages/CartPage';
 import Tshirts from './pages/TshirtPage';
 import Sweatshirts from './pages/SweatshirtPage';
 import Hoodies from './pages/HoodiePage';
 import Tanktops from './pages/TanktopPage';
 import AllProducts from './pages/AllProductsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 // Baseurl
@@ -142,13 +144,7 @@ class App extends Component {
      })
      
   }
-  addProduct = (newProduct) => {
-    const copyProducts = [...this.state.products]
-    copyProducts.push(newProduct)
-    this.setState({
-      products: copyProducts
-    })
-  }
+  
     componentDidMount() {
       this.getProducts()
       this.getTshirts()
@@ -192,6 +188,12 @@ class App extends Component {
     }
     else if(this.state.page === 'register') {
       page = <RegisterPage setUser={this.setUser} setPage={this.setPage} />
+    }
+    else if(this.state.page === 'cart') {
+      page = <CartPage setUser={this.setUser} setPage={this.setPage} />
+    }
+    else if(this.state.page === 'admin') {
+      page = <AllProductsAdmin products={this.state.products} setPage={this.setPage} />
     }
     else {
       page = <HomePage setPage={this.setPage}/>

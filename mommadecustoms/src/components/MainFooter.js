@@ -40,6 +40,18 @@ function Footer(props) {
     
                 </Row>
             </Container>
+            <Nav className="justify-content-end">
+                
+                <i onDoubleClick={()=> props.setPage('admin')} >
+                      <h2>T-Shirts</h2>
+                         <Image id="admin-img" 
+                                src="https://cdn.iconscout.com/icon/premium/png-256-thumb/admin-setting-4-559934.png" 
+                                height="60px"
+                                width="60px"
+                                alt='admin'
+                                roundedCircle />
+                        </i>
+            </Nav>
           </Navbar>
           
     </div>

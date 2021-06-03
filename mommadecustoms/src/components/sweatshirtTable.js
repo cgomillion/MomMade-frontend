@@ -11,7 +11,7 @@ const Sweatshirts = (props) => {
                         <div key={sweatshirt.id} className="item-div">
                             
 
-                        <Card style={{ width: '18rem' }}>
+                        <Card border="dark" bg="success" style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={sweatshirt.product.img} />
                             <Card.Body>
                               <Card.Title>{sweatshirt.product.name}</Card.Title>

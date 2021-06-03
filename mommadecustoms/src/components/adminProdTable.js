@@ -1,7 +1,7 @@
 
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
-const Products = (props) => {
+const AdminProducts = (props) => {
     
     return (
         <div className="product-div">
@@ -9,10 +9,10 @@ const Products = (props) => {
                 {props.products.map(products => {
                     // console.log(products.product.name)
                     return (
-                        <div key={products.id} className="item-div">
+                        <div key= {products.id} className="item-div">
                             
 
-                        <Card border="dark" bg="success" style={{ width: '18rem' }}>
+                        <Card border="dark" bg="danger" style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={products.product.img} />
                             <Card.Body>
                               <Card.Title>{products.product.name}</Card.Title>
@@ -21,8 +21,8 @@ const Products = (props) => {
                             <ListGroup  className="list-group-flush">
                               <ListGroupItem>Price: {products.product.price}</ListGroupItem>
                               <ListGroupItem>Brand: {products.product.brand} </ListGroupItem>
-                              <ListGroupItem > {products.product.description} </ListGroupItem>
-                              <ListGroupItem > {products.product.color} </ListGroupItem>
+                              <ListGroupItem onClick={()=>props.deleteProduct(products._id)}> Remove </ListGroupItem>
+                              <ListGroupItem onClick={()=>props.showEditForm(products)}> Edit </ListGroupItem>
                             </ListGroup>
                         </Card>
 
@@ -36,4 +36,4 @@ const Products = (props) => {
 }
 
 
-export default Products
+export default AdminProducts
