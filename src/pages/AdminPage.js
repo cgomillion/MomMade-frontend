@@ -9,7 +9,8 @@ let baseUrl = ''
 if (process.env.NODE_ENV === 'development') {
   baseUrl = 'http://localhost:3005'
 } else {
-  // heroku here
+  baseUrl = 'https://git.heroku.com/proj4-mommadecustoms-api.git'
+
 }
 
 export default class AllProductsAdmin extends Component {

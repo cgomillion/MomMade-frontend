@@ -5,7 +5,7 @@ let baseUrl = ''
 if (process.env.NODE_ENV === 'development') {
   baseUrl = 'http://localhost:3005'
 } else {
-   // heroku url here
+  baseUrl = 'https://git.heroku.com/proj4-mommadecustoms-api.git'
 }
  const Header = (props) => {
    
