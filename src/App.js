@@ -14,7 +14,6 @@ import Tanktops from './pages/TanktopPage';
 import AllProducts from './pages/AllProductsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 // Baseurl
 let baseUrl = process.env.REACT_APP_BASEURL
 
