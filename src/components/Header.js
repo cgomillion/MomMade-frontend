@@ -1,12 +1,13 @@
 import React from 'react'
 import {  Navbar, Nav } from 'react-bootstrap'
-let baseUrl = ''
 
-if (process.env.NODE_ENV === 'development') {
-  baseUrl = 'http://localhost:3005'
-} else {
-  baseUrl = 'https://proj4-mommadecustoms-api.herokuapp.com/'
-}
+let baseUrl = process.env.REACT_APP_BASEURL;
+
+// if (process.env.NODE_ENV === 'development') {
+//   baseUrl = 'http://localhost:3005'
+// } else {
+//   baseUrl = 'https://proj4-mommadecustoms-api.herokuapp.com/'
+// }
  const Header = (props) => {
    
 

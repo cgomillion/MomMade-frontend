@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Form, Button } from 'react-bootstrap'
 
-let baseUrl = ''
+let baseUrl = process.env.REACT_APP_BASEURL;
 
-if (process.env.NODE_ENV === 'development') {
-  baseUrl = 'http://localhost:3005'
-} else {
-  baseUrl = 'https://proj4-mommadecustoms-api.herokuapp.com/'
-}
+// if (process.env.NODE_ENV === 'development') {
+//   baseUrl = 'http://localhost:3005'
+// } else {
+//   baseUrl = 'https://proj4-mommadecustoms-api.herokuapp.com/'
+// }
 
 
 class LoginPage extends Component {

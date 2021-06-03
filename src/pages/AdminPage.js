@@ -4,14 +4,14 @@ import NewProductForm from '../components/newProductForm';
 
 
 // Baseurl
-let baseUrl = ''
+let baseUrl = process.env.REACT_APP_BASEURL;
 
-if (process.env.NODE_ENV === 'development') {
-  baseUrl = 'http://localhost:3005'
-} else {
-  baseUrl = 'https://proj4-mommadecustoms-api.herokuapp.com/'
+// if (process.env.NODE_ENV === 'development') {
+//   baseURL = 'http://localhost:3005'
+// } else {
+//   baseURL = 'https://proj4-mommadecustoms-api.herokuapp.com/'
 
-}
+// }
 
 export default class AllProductsAdmin extends Component {
     constructor(props) {
