@@ -15,7 +15,7 @@ import AllProducts from './pages/AllProductsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Baseurl
-let baseUrl = process.env.REACT_APP_BASEURL
+let baseUrl = process.env.REACT_APP_BASEURL;
 
 // if (process.env.NODE_ENV === 'development') {
 //   baseUrl = 'http://localhost:3005'
@@ -41,7 +41,11 @@ class App extends Component {
   getProducts = () => {
     // fetch call to the server (backend)
     fetch(baseUrl + "/products",{
-      credentials: "include"
+      credentials: "include",
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
     })
     .then(res => { 
       if (res.status===200){
@@ -51,9 +55,10 @@ class App extends Component {
         return []
       }
     }).then(data => {
-      this.setState({
-        products: data,
-      })
+      console.log(data)
+      // this.setState({
+      //   products: data,
+      // })
       
      })
      
