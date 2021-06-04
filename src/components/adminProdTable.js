@@ -21,8 +21,8 @@ const AdminProducts = (props) => {
                             <ListGroup  className="list-group-flush">
                               <ListGroupItem>Price: {products.product.price}</ListGroupItem>
                               <ListGroupItem>Brand: {products.product.brand} </ListGroupItem>
-                              <ListGroupItem onClick={()=>props.deleteProduct(products._id)}> Remove </ListGroupItem>
-                              <ListGroupItem onClick={()=>props.showEditForm(products)}> Edit </ListGroupItem>
+                              <ListGroupItem className="admin-link" onClick={()=>props.deleteProduct(products._id)}> Remove </ListGroupItem>
+                              <ListGroupItem className="admin-link" onClick={()=>props.showEditForm(products)}> Edit </ListGroupItem>
                             </ListGroup>
                         </Card>
 
