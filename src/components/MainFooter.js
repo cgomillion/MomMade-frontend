@@ -34,7 +34,7 @@ function Footer(props) {
                     </Col>
                     <Col xs={5} md={2}>
                     <a href="https://www.linkedin.com/in/corey-gomillion/">
-                        <Image id="linkedin-logo" src="https://img-premium.flaticon.com/png/512/61/61109.png?token=exp=1622436046~hmac=f48dfc1db8d3c379527023746f1d24e9"  roundedCircle />
+                        <Image id="linkedin-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYFRvUEqzzAK2FS51pmGNrLFNXiVfKJ36Rtw&usqp=CAU" roundedCircle />
                     </a>
                     </Col>
     
