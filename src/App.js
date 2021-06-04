@@ -41,6 +41,7 @@ class App extends Component {
   getProducts = () => {
     // fetch call to the server (backend)
     fetch(baseUrl + "/products",{
+      mode: 'no-cors',
       credentials: "include",
       headers : { 
         'Content-Type': 'application/json',
