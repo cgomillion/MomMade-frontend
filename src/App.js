@@ -218,7 +218,6 @@ class App extends Component {
      <br/>
      <Footer setPage={this.setPage}/>
      
-
     </div>
     );
   }
