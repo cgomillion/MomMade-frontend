@@ -74,3 +74,8 @@ h2 {
 .admin-link {
   cursor: pointer;
 }
+
+.header-link {
+  font-size: xx-large;
+  font-family: 'Gochi Hand', cursive;
+}

@@ -44,11 +44,11 @@ let baseUrl = process.env.REACT_APP_BACKENDURL;
             <Navbar.Collapse className="justify-content-start">
               <Nav className="justify-content-start">
                 <Nav.Link href="/">Home</Nav.Link> <br/>
-                <Nav.Link onClick={() => props.setPage('tshirts')}>T-Shirts</Nav.Link>
-                <Nav.Link onClick={() => props.setPage('sweatshirts')}>Sweatshirts</Nav.Link>
-                <Nav.Link onClick={() => props.setPage('hoodies')}>Hoodies</Nav.Link>
-                <Nav.Link onClick={() => props.setPage('tanktops')}>Tanktops</Nav.Link>
-                <Nav.Link onClick={() => props.setPage('products')}>All Products</Nav.Link>
+                <Nav.Link className="header-link" onClick={() => props.setPage('tshirts')}>T-Shirts</Nav.Link>
+                <Nav.Link className="header-link" onClick={() => props.setPage('sweatshirts')}>Sweatshirts</Nav.Link>
+                <Nav.Link className="header-link" onClick={() => props.setPage('hoodies')}>Hoodies</Nav.Link>
+                <Nav.Link className="header-link" onClick={() => props.setPage('tanktops')}>Tanktops</Nav.Link>
+                <Nav.Link className="header-link" onClick={() => props.setPage('products')}>All Products</Nav.Link>
                 <Nav.Link href="#disabled" disabled>Create-Your-Own <br/> Coming Soon!</Nav.Link>
               </Nav>
               </Navbar.Collapse>
