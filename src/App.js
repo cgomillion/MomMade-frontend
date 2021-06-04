@@ -15,7 +15,7 @@ import AllProducts from './pages/AllProductsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Baseurl
-let baseUrl =  process.env.BACKENDURL;
+let baseUrl =  'https://proj4-mommadecustoms-api.herokuapp.com';
 
 // if (process.env.NODE_ENV === 'development') {
 //   baseUrl = 'http://localhost:3005'
