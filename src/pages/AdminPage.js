@@ -64,6 +64,7 @@ export default class AllProductsAdmin extends Component {
             this.setState({
               products: copyProducts
             })
+            this.props.getProducts()
           }
           
         }
@@ -106,6 +107,7 @@ export default class AllProductsAdmin extends Component {
                 products: copyProducts,
                 modalOpen:false
               })
+              this.props.getProducts()
             }
           }
           catch(err){

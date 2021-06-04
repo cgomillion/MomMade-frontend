@@ -196,7 +196,7 @@ class App extends Component {
       page = <CartPage setUser={this.setUser} setPage={this.setPage} />
     }
     else if(this.state.page === 'admin') {
-      page = <AllProductsAdmin products={this.state.products} setPage={this.setPage} />
+      page = <AllProductsAdmin getProducts={this.getProducts} products={this.state.products} setPage={this.setPage} />
     }
     else {
       page = <HomePage setPage={this.setPage}/>
