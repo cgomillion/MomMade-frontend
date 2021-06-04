@@ -40,7 +40,7 @@ class App extends Component {
 
   getProducts = () => {
     // fetch call to the server (backend)
-    fetch(baseUrl + "/products",{
+    fetch(baseUrl + "/products/products",{
       mode: 'no-cors',
       credentials: "include",
       headers : { 
@@ -202,7 +202,7 @@ class App extends Component {
       page = <HomePage setPage={this.setPage}/>
     }
 
-    console.log(process.env)
+    // console.log(process.env)
 
   return (
     <div className="App">
