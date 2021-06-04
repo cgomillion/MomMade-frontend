@@ -17,12 +17,12 @@ function Footer(props) {
            
             <Navbar.Collapse className="justify-content-start">
               <Nav className="justify-content-start">
-                <Nav.Link href="/">Home</Nav.Link> <br/>
-                <Nav.Link onClick={() => props.setPage('tshirts')}>T-Shirts</Nav.Link> <br/>
-                <Nav.Link onClick={() => props.setPage('sweatshirts')}>Sweatshirts</Nav.Link> <br/>
-                <Nav.Link onClick={() => props.setPage('hoodies')}>Hoodies</Nav.Link> <br/>
-                <Nav.Link onClick={() => props.setPage('tanktops')}>Tanktops</Nav.Link> <br/>
-                <Nav.Link onClick={() => props.setPage('products')}>All Products</Nav.Link> <br/>
+                <Nav.Link className="header-link" href="/">Home</Nav.Link> <br/>
+                <Nav.Link className="header-link" onClick={() => props.setPage('tshirts')}>T-Shirts</Nav.Link> <br/>
+                <Nav.Link className="header-link" onClick={() => props.setPage('sweatshirts')}>Sweatshirts</Nav.Link> <br/>
+                <Nav.Link className="header-link" onClick={() => props.setPage('hoodies')}>Hoodies</Nav.Link> <br/>
+                <Nav.Link className="header-link" onClick={() => props.setPage('tanktops')}>Tanktops</Nav.Link> <br/>
+                <Nav.Link className="header-link" onClick={() => props.setPage('products')}>All Products</Nav.Link> <br/>
               </Nav>
               </Navbar.Collapse>
               <Container className="justify-content-center" id="personal-links">
