@@ -1,5 +1,6 @@
 {
   "name": "mommadecustoms",
+  "proxy": "https://proj4-mommadecustoms-react.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "engines": {
