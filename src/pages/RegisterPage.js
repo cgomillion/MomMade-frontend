@@ -27,7 +27,7 @@ class Register extends Component {
   registerUser = async (event) => {
     event.preventDefault()
 
-    const url = baseUrl + '/user/signup'
+    const url = baseUrl + 'user/signup'
 
     try {
       const response = await fetch(url, {

@@ -30,7 +30,7 @@ class LoginPage extends Component {
   loginUser = async (event) => {
     event.preventDefault()
 
-    const url = baseUrl + '/user/login'
+    const url = baseUrl + 'user/login'
     
     try {
       const response = await fetch(url, {

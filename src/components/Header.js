@@ -12,7 +12,7 @@ let baseUrl = process.env.REACT_APP_BASEURL;
    
 
    const logoutUser = async (event) => {
-    const url = baseUrl + '/user/logout'
+    const url = baseUrl + 'user/logout'
     try {
       const response = await fetch(url, {
         method: 'DELETE',
