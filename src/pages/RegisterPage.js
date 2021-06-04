@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Button } from 'react-bootstrap'
 
-let baseUrl = process.env.REACT_APP_BASEURL;
+let baseUrl = process.env.REACT_APP_BACKENDURL;
 
 // if (process.env.NODE_ENV === 'development') {
 //   baseUrl = 'http://localhost:3005'
@@ -27,7 +27,7 @@ class Register extends Component {
   registerUser = async (event) => {
     event.preventDefault()
 
-    const url = baseUrl + 'user/signup'
+    const url = baseUrl + '/user/signup'
 
     try {
       const response = await fetch(url, {

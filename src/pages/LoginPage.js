@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Button } from 'react-bootstrap'
 
-let baseUrl = process.env.REACT_APP_BASEURL;
+let baseUrl = process.env.REACT_APP_BACKENDURL;
 
 // if (process.env.NODE_ENV === 'development') {
 //   baseUrl = 'http://localhost:3005'
@@ -30,7 +30,7 @@ class LoginPage extends Component {
   loginUser = async (event) => {
     event.preventDefault()
 
-    const url = baseUrl + 'user/login'
+    const url = baseUrl + '/user/login'
     
     try {
       const response = await fetch(url, {

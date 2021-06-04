@@ -37,7 +37,7 @@ export default class NewProductForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     
-    fetch(this.props.baseUrl + 'products', {
+    fetch(this.props.baseUrl + '/products', {
       method: 'POST',
       body: JSON.stringify({
         type: this.state.type,

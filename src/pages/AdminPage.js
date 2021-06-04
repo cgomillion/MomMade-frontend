@@ -4,7 +4,7 @@ import NewProductForm from '../components/newProductForm';
 
 
 // Baseurl
-let baseUrl = process.env.REACT_APP_BASEURL;
+let baseUrl = process.env.REACT_APP_BACKENDURL;
 
 // if (process.env.NODE_ENV === 'development') {
 //   baseURL = 'http://localhost:3005'
@@ -46,7 +46,7 @@ export default class AllProductsAdmin extends Component {
       }
 
     deleteProduct = async (id) => {
-        const url = baseUrl + 'products/' + id
+        const url = baseUrl + '/products/' + id
         
         try{
           const response = await fetch( url, {
@@ -74,7 +74,7 @@ export default class AllProductsAdmin extends Component {
     
       handleSubmit = async (e) => {
         e.preventDefault()
-          const url = baseUrl + 'products/' + this.state.productToBeEdited._id
+          const url = baseUrl + '/products/' + this.state.productToBeEdited._id
           try{
             const response = await fetch( url , {
               method: 'PUT',

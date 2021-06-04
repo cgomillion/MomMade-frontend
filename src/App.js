@@ -15,8 +15,8 @@ import AllProducts from './pages/AllProductsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Baseurl
-let baseUrl =  'https://proj4-mommadecustoms-api.herokuapp.com';
-// process.env.REACT_APP_BASEURL 
+let baseUrl =  process.env.BACKENDURL;
+
 // if (process.env.NODE_ENV === 'development') {
 //   baseUrl = 'http://localhost:3005'
 // } else {
@@ -40,7 +40,7 @@ class App extends Component {
 
   getProducts = () => {
     // fetch call to the server (backend)
-    fetch(baseUrl + "products",{
+    fetch(baseUrl + "/products",{
       credentials: "include",
       headers : { 
         'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ class App extends Component {
 
   getTshirts = () => {
     // fetch call to the server (backend)
-    fetch(baseUrl + "products/tshirts",{
+    fetch(baseUrl + "/products/tshirts",{
       credentials: "include"
     })
     .then(res => { 
@@ -87,7 +87,7 @@ class App extends Component {
 
   getSweatshirts = () => {
     // fetch call to the server (backend)
-    fetch(baseUrl + "products/sweatshirts",{
+    fetch(baseUrl + "/products/sweatshirts",{
       credentials: "include"
     })
     .then(res => { 
@@ -108,7 +108,7 @@ class App extends Component {
 
   getHoodies = () => {
     // fetch call to the server (backend)
-    fetch(baseUrl + "products/hoodies",{
+    fetch(baseUrl + "/products/hoodies",{
       credentials: "include"
     })
     .then(res => { 
@@ -129,7 +129,7 @@ class App extends Component {
 
   getTanktops = () => {
     // fetch call to the server (backend)
-    fetch(baseUrl + "products/tanktops",{
+    fetch(baseUrl + "/products/tanktops",{
       credentials: "include"
     })
     .then(res => { 

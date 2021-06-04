@@ -1,7 +1,7 @@
 import React from 'react'
 import {  Navbar, Nav } from 'react-bootstrap'
 
-let baseUrl = process.env.REACT_APP_BASEURL;
+let baseUrl = process.env.REACT_APP_BACKENDURL;
 
 // if (process.env.NODE_ENV === 'development') {
 //   baseUrl = 'http://localhost:3005'
@@ -12,7 +12,7 @@ let baseUrl = process.env.REACT_APP_BASEURL;
    
 
    const logoutUser = async (event) => {
-    const url = baseUrl + 'user/logout'
+    const url = baseUrl + '/user/logout'
     try {
       const response = await fetch(url, {
         method: 'DELETE',
