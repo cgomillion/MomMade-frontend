@@ -43,6 +43,7 @@ export default class AllProductsAdmin extends Component {
         this.setState({
           products: copyProducts
         })
+        this.props.getProducts()
       }
 
     deleteProduct = async (id) => {
