@@ -15,8 +15,8 @@ import AllProducts from './pages/AllProductsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Baseurl
-let baseUrl = process.env.REACT_APP_BASEURL;
-
+let baseUrl =  'https://proj4-mommadecustoms-api.herokuapp.com';
+// process.env.REACT_APP_BASEURL 
 // if (process.env.NODE_ENV === 'development') {
 //   baseUrl = 'http://localhost:3005'
 // } else {
@@ -56,9 +56,9 @@ class App extends Component {
       }
     }).then(data => {
       console.log(data)
-      // this.setState({
-      //   products: data,
-      // })
+      this.setState({
+        products: data,
+      })
       
      })
      
@@ -200,6 +200,8 @@ class App extends Component {
     else {
       page = <HomePage setPage={this.setPage}/>
     }
+
+    console.log(process.env)
 
   return (
     <div className="App">
