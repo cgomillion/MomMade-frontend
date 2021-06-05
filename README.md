@@ -12,3 +12,16 @@ Problem/Scenario: My older sister, Lauren, makes custom printed apparel. She has
 Purpose: To create an interactive and smooth functioning website for my sister's clients/consumer to use and have access to her entire inventory.
 
 Likely Users: Fashionistas, Kids, Parents, Sports Teams, Professional Athletes, Teens, Adults, Elderly
+
+
+-----------  USER STORIES  --------------
+
+-> When the user enters the website url, they will be shown the home screen with a carosel of featured items, as well as: A header to display the different tabs/links for the types of apparel provided as well as the ability to log-in and view their cart guest/user, with all the contact info located at the bottom.
+
+-> When the user clicks on any given apparel tab (t-shirt, sweatshirt, etc.), they will be redirected to the selected apparel type's index page; a gallery of all the available designs and styles
+
+-> The User will be able the click any item individually and see its view page; a display that allows the user to select the size, color and, quantity as needed and add to their shopping cart (Still in development)
+
+-> The User will be able to view and edit their shopping cart  before completing the check-out transaction. (Cart is still in development)
+
+-> The User will be able the register and log-in to an account that will save and store their previous cart selections (Cart is still in development)
