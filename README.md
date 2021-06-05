@@ -1,6 +1,6 @@
 Refrence Website: https://mommadecustoms.com/
 
-Frontend GitHub: https://github.com/cgomillion/MomMade-frontend
+Backend GitHub (Main ReadMe): https://github.com/cgomillion/MomMadeShirts-backend
 
 Heroku Frontend: https://proj4-mommadecustoms-react.herokuapp.com/
 
