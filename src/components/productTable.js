@@ -15,14 +15,14 @@ const Products = (props) => {
                         <Card border="dark" bg="success" style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={products.product.img} />
                             <Card.Body>
-                              <Card.Title>{products.product.name}</Card.Title>
+                              <Card.Title className="card-name">{products.product.name}</Card.Title>
                              
                             </Card.Body>
                             <ListGroup  className="list-group-flush">
-                              <ListGroupItem>Price: {products.product.price}</ListGroupItem>
-                              <ListGroupItem>Brand: {products.product.brand} </ListGroupItem>
-                              <ListGroupItem > {products.product.description} </ListGroupItem>
-                              <ListGroupItem > {products.product.color} </ListGroupItem>
+                              <ListGroupItem className="card-desc">Price: {products.product.price}</ListGroupItem>
+                              <ListGroupItem className="card-name">Brand: {products.product.brand} </ListGroupItem>
+                              <ListGroupItem className="card-desc"> {products.product.description} </ListGroupItem>
+                              <ListGroupItem className="card-desc"> {products.product.color} </ListGroupItem>
                             </ListGroup>
                         </Card>
 

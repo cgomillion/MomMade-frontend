@@ -14,12 +14,14 @@ const Tanktops = (props) => {
                         <Card border="dark" bg="success" style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={tanks.product.img} />
                             <Card.Body>
-                              <Card.Title>{tanks.product.name}</Card.Title>
+                              <Card.Title className="card-name">{tanks.product.name}</Card.Title>
                              
                             </Card.Body>
                             <ListGroup className="list-group-flush">
-                              <ListGroupItem>Price: {tanks.product.price}</ListGroupItem>
-                              <ListGroupItem>Brand: {tanks.product.brand} </ListGroupItem>
+                              <ListGroupItem className="card-desc">Price: {tanks.product.price}</ListGroupItem>
+                              <ListGroupItem className="card-name">Brand: {tanks.product.brand} </ListGroupItem>
+                              <ListGroupItem className="card-desc"> {tanks.product.description} </ListGroupItem>
+                              <ListGroupItem className="card-desc"> {tanks.product.color} </ListGroupItem>
                             </ListGroup>
                         </Card>
 

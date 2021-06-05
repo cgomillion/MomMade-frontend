@@ -84,3 +84,11 @@ h2 {
   font-size: large;
   font-family: 'Fugaz One', cursive;
 }
+
+.card-name {
+  font-family: 'Fugaz One', cursive;
+}
+
+.card-desc {
+  font-family: 'Gochi Hand', cursive;
+}
