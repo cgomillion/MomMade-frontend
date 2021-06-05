@@ -170,7 +170,7 @@ const Home = (props) => {
                     <div id="collections">
                     <i onDoubleClick={()=> props.setPage('sweatshirts')} >
                       <h2>Sweatshirts</h2>
-                     <Image id="sweatshirt-collec-img" 
+                     <Image id="tshirt-collec-img" 
                             src="https://i.etsystatic.com/17860400/r/il/6ed783/2692755938/il_1588xN.2692755938_rwmj.jpg" 
                             height="300px"
                             width="300px"
@@ -180,7 +180,7 @@ const Home = (props) => {
                     <div id="collections">
                     <i onDoubleClick={()=> props.setPage('hoodies')} >
                       <h2>Hoodies</h2>
-                     <Image id="hoodie-collec-img" 
+                     <Image id="tshirt-collec-img" 
                             src="https://i.etsystatic.com/17860400/r/il/4ce819/2369498554/il_1588xN.2369498554_tfiw.jpg" 
                             height="300px"
                             width="300px"
@@ -190,7 +190,7 @@ const Home = (props) => {
                     <div id="collections">
                     <i onDoubleClick={()=> props.setPage('tanktops')} >
                       <h2>Tank Tops</h2>
-                     <Image id="tanktop-collec-img" 
+                     <Image id="tshirt-collec-img" 
                             src="https://i.etsystatic.com/17860400/r/il/c5856b/2139843160/il_1588xN.2139843160_hat4.jpg" 
                             height="300px"
                             width="300px"

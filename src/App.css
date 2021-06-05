@@ -71,7 +71,7 @@ h2 {
   font-family: 'Gochi Hand', cursive;
 }
 
-.admin-link {
+.admin-link, #tshirt-collec-img {
   cursor: pointer;
 }
 
